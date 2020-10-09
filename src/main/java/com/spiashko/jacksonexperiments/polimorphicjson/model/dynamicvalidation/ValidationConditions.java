@@ -19,6 +19,6 @@ public class ValidationConditions {
     @JsonSubTypes({
             @JsonSubTypes.Type(value = NumericTriggerConditions.class, name = "NUMERIC")
     })
-    private TriggerConditions conditions;
+    private TriggerConditions<?> conditions;
 
 }
