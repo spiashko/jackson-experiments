@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface TriggerConditions<T> {
 
-    List<TriggerConditionListItem<T>> getList();
+    List<? extends TriggerConditionListItem<T>> getList();
 
 }

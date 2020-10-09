@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
@@ -14,15 +13,7 @@ import java.util.List;
 public class NumericTriggerConditions implements
         TriggerConditions<BigDecimal> {
 
-    private NumericTriggerConditionList list;
-
-    public List<TriggerConditionListItem<BigDecimal>> getList() {
-        return (List) list;
-    }
-
-    public static class NumericTriggerConditionList extends ArrayList<NumericTriggerConditionListItem> {
-
-    }
+    private List<NumericTriggerConditionListItem> list;
 
     @Getter
     @Setter
