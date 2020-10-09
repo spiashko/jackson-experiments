@@ -1,4 +1,4 @@
-package com.spiashko.jacksonexperiments.polimorphicjson.model;
+package com.spiashko.jacksonexperiments.polimorphicjson.model.asset;
 
 import lombok.Getter;
 import lombok.Setter;

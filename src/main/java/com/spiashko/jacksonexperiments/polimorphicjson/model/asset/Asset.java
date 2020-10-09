@@ -1,4 +1,4 @@
-package com.spiashko.jacksonexperiments.polimorphicjson.model;
+package com.spiashko.jacksonexperiments.polimorphicjson.model.asset;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
