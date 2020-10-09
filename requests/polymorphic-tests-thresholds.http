@@ -1,0 +1,19 @@
+###
+POST http://localhost:8080/polymorphic-json/validation-conditions
+Content-Type: application/json
+
+{
+  "type": "string",
+  "inputType": "NUMERIC",
+  "conditions": {
+    "list": [
+      {
+        "severity": "EXCEPTION",
+        "condition": {
+          "lessThan": 1.0,
+          "greaterThan": 2.0
+        }
+      }
+    ]
+  }
+}

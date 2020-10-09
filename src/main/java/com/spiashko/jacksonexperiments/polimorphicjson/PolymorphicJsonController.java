@@ -1,6 +1,7 @@
 package com.spiashko.jacksonexperiments.polimorphicjson;
 
 import com.spiashko.jacksonexperiments.polimorphicjson.model.asset.Asset;
+import com.spiashko.jacksonexperiments.polimorphicjson.model.dynamicvalidation.ValidationConditions;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,12 @@ public class PolymorphicJsonController {
     @PostMapping("/asset")
     public Asset processPolymorphicJson(@RequestBody Asset asset) {
         return asset;
+    }
+
+    @PostMapping("/validation-conditions")
+    public ValidationConditions processPolymorphicJson(
+            @RequestBody ValidationConditions request) {
+        return request;
     }
 
 }
