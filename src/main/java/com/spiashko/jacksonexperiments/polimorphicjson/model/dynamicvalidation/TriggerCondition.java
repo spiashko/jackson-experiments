@@ -1,9 +1,9 @@
 package com.spiashko.jacksonexperiments.polimorphicjson.model.dynamicvalidation;
 
-public interface TriggerCondition {
+public interface TriggerCondition<T> {
 
-    Comparable getLessThan();
+    Comparable<T> getLessThan();
 
-    Comparable getGreaterThan();
+    Comparable<T> getGreaterThan();
 
 }

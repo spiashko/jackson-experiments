@@ -2,8 +2,8 @@ package com.spiashko.jacksonexperiments.polimorphicjson.model.dynamicvalidation;
 
 import java.util.List;
 
-public interface TriggerConditions {
+public interface TriggerConditions<T> {
 
-    List getList();
+    List<TriggerConditionListItem<T>> getList();
 
 }

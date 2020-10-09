@@ -1,9 +1,9 @@
 package com.spiashko.jacksonexperiments.polimorphicjson.model.dynamicvalidation;
 
-public interface TriggerConditionListItem {
+public interface TriggerConditionListItem<T> {
 
     PolicyEnum getSeverity();
 
-    TriggerCondition getCondition();
+    TriggerCondition<T> getCondition();
 
 }

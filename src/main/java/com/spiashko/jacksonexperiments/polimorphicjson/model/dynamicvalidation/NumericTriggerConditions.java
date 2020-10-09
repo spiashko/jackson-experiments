@@ -6,13 +6,19 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @Getter
 @Setter
-public class NumericTriggerConditions implements TriggerConditions {
+public class NumericTriggerConditions implements
+        TriggerConditions<BigDecimal> {
 
     private NumericTriggerConditionList list;
+
+    public List<TriggerConditionListItem<BigDecimal>> getList() {
+        return (List) list;
+    }
 
     public static class NumericTriggerConditionList extends ArrayList<NumericTriggerConditionListItem> {
 
@@ -20,7 +26,7 @@ public class NumericTriggerConditions implements TriggerConditions {
 
     @Getter
     @Setter
-    public static class NumericTriggerConditionListItem implements TriggerConditionListItem {
+    public static class NumericTriggerConditionListItem implements TriggerConditionListItem<BigDecimal> {
 
         private PolicyEnum severity;
         private NumericTriggerCondition condition;
@@ -29,7 +35,7 @@ public class NumericTriggerConditions implements TriggerConditions {
 
     @Getter
     @Setter
-    public static class NumericTriggerCondition implements TriggerCondition {
+    public static class NumericTriggerCondition implements TriggerCondition<BigDecimal> {
         private BigDecimal lessThan;
         private BigDecimal greaterThan;
     }
